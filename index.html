@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lower Third Control</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.card {
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+h2 {
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 22px;
+}
+label {
+  display: block;
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+input[type="text"] {
+  width: 100%;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  outline: none;
+}
+input[type="text"]:focus { border-color: #ff6b00; }
+.btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+.btn-update {
+  background: linear-gradient(135deg, #ff6b00, #ffcc00);
+  color: #000;
+}
+.btn-hide {
+  background: #333;
+  color: #fff;
+  margin-top: 10px;
+}
+.status {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #888;
+  min-height: 20px;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff4444;
+  margin-right: 6px;
+}
+.dot.live { background: #44ff88; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>🎬 Lower Third Control</h2>
+  <label>Naam</label>
+  <input type="text" id="naam" placeholder="Apna naam likhein..." />
+  <label>Title</label>
+  <input type="text" id="title" placeholder="Jaise: Gamer | YouTuber" />
+  <button class="btn btn-update" onclick="update()">▶ OBS Mein Show Karo</button>
+  <button class="btn btn-hide" onclick="hide()">✕ Hide Karo</button>
+  <div class="status" id="status"><span class="dot" id="dot"></span><span id="statusText">Connecting...</span></div>
+</div>
+<script>
+const ws = new WebSocket('wss://' + location.host);
+ws.onopen = () => {
+  document.getElementById('dot').classList.add('live');
+  document.getElementById('statusText').textContent = 'Connected ✓';
+};
+ws.onclose = () => {
+  document.getElementById('dot').classList.remove('live');
+  document.getElementById('statusText').textContent = 'Disconnected';
+};
+function update() {
+  const naam = document.getElementById('naam').value;
+  const title = document.getElementById('title').value;
+  ws.send(JSON.stringify({ type: 'update', naam, title }));
+  document.getElementById('statusText').textContent = 'Bhej diya! ✓';
+  setTimeout(() => document.getElementById('statusText').textContent = 'Connected ✓', 2000);
+}
+function hide() {
+  ws.send(JSON.stringify({ type: 'hide' }));
+  document.getElementById('statusText').textContent = 'Hide kar diya ✓';
+  setTimeout(() => document.getElementById('statusText').textContent = 'Connected ✓', 2000);
+}
+</script>
+</body>
+</html>
