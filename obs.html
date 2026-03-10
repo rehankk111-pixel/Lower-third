@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: transparent;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: Arial Black, Arial;
+}
+.lower-third {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.lower-third.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.bar {
+  width: 6px;
+  height: 75px;
+  background: linear-gradient(#ff6b00, #ffcc00);
+  border-radius: 3px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.box {
+  background: rgba(0,0,0,0.85);
+  padding: 12px 30px 12px 18px;
+}
+.name {
+  font-size: 38px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffcc00;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+</style>
+</head>
+<body>
+<div class="lower-third" id="lt">
+  <div class="bar"></div>
+  <div class="box">
+    <div class="name" id="naam">NAAM</div>
+    <div class="title" id="title">Title</div>
+  </div>
+</div>
+<script>
+const ws = new WebSocket('wss://' + location.host);
+ws.onmessage = (e) => {
+  const data = JSON.parse(e.data);
+  if (data.type === 'update') {
+    document.getElementById('naam').textContent = data.naam;
+    document.getElementById('title').textContent = data.title;
+    document.getElementById('lt').classList.add('show');
+  }
+  if (data.type === 'hide') {
+    document.getElementById('lt').classList.remove('show');
+  }
+};
+</script>
+</body>
+</html>
