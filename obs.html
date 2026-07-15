@@ -12,6 +12,16 @@ body { background:transparent; width:1920px; height:1080px; overflow:hidden; }
 .lower-third.theme-3 { --c1:#333333; --c2:#eeeeee; --c1d:#0a0a0a; --glow:200,200,200;--title:220,220,220; }
 .lower-third.theme-4 { --c1:#0a6030; --c2:#ffd700; --c1d:#043318; --glow:0,255,140;  --title:180,255,210; }
 .lower-third.theme-5 { --c1:#7700cc; --c2:#cccccc; --c1d:#3d0066; --glow:170,0,255;  --title:220,190,255; }
+.lower-third.theme-6 { --c1:#0d9488; --c2:#fb7185; --c1d:#065f56; --glow:20,184,166; --title:190,240,230; }
+.lower-third.theme-7 { --c1:#b91c1c; --c2:#1a1a1a; --c1d:#5c0e0e; --glow:220,20,20;  --title:255,180,180; }
+.lower-third.theme-8 { --c1:#5b21b6; --c2:#fbbf24; --c1d:#33115f; --glow:130,60,220; --title:220,190,255; }
+.lower-third.theme-9 { --c1:#059669; --c2:#f8fafc; --c1d:#02392a; --glow:5,200,140;  --title:200,255,225; }
+.lower-third.theme-10{ --c1:#f97316; --c2:#ec4899; --c1d:#7c3403; --glow:250,140,40; --title:255,210,180; }
+.lower-third.theme-11{ --c1:#0c1e3d; --c2:#22d3ee; --c1d:#040d1e; --glow:30,200,230; --title:180,240,255; }
+.lower-third.theme-12{ --c1:#db2777; --c2:#9333ea; --c1d:#6b0f45; --glow:230,40,150; --title:250,200,235; }
+.lower-third.theme-13{ --c1:#475569; --c2:#3b82f6; --c1d:#1e293b; --glow:70,130,230; --title:200,220,245; }
+.lower-third.theme-14{ --c1:#7f1d1d; --c2:#eab308; --c1d:#3d0a0a; --glow:200,60,30;  --title:255,215,150; }
+.lower-third.theme-15{ --c1:#00ff88; --c2:#0a0a0a; --c1d:#003a1f; --glow:0,255,140;  --title:180,255,210; }
 
 .lower-third { position:absolute; bottom:90px; left:80px; opacity:0; transform:translateX(-80px); transition:opacity 0.6s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1); }
 .lower-third.show { opacity:1; transform:translateX(0); }
@@ -24,10 +34,20 @@ body { background:transparent; width:1920px; height:1080px; overflow:hidden; }
 .lower-third[data-style="5"] .style-5{display:flex}
 .lower-third[data-style="6"] .style-6{display:flex}
 .lower-third[data-style="7"] .style-7{display:flex}
+.lower-third[data-style="8"] .style-8{display:flex}
+.lower-third[data-style="9"] .style-9{display:flex}
+.lower-third[data-style="10"] .style-10{display:flex}
+.lower-third[data-style="11"] .style-11{display:flex}
+.lower-third[data-style="12"] .style-12{display:flex}
+.lower-third[data-style="13"] .style-13{display:flex}
+.lower-third[data-style="14"] .style-14{display:flex}
+.lower-third[data-style="15"] .style-15{display:flex}
+.lower-third[data-style="16"] .style-16{display:flex}
+.lower-third[data-style="17"] .style-17{display:flex}
 
-.naam-slot, .title-slot { font-family:'Mukta',sans-serif; }
+.naam-slot, .title-slot { font-family:'Mukta',sans-serif; display:block; }
 
-/* ================= STYLE 1 — CIRCLE GLOW ================= */
+/* ===== STYLE 1 — CIRCLE GLOW ===== */
 .style-1 .circle-wrap { position:relative; width:130px; height:130px; flex-shrink:0; z-index:2; margin-right:-20px; }
 .style-1 .circle-outer { position:absolute; inset:0; border-radius:50%; background:conic-gradient(var(--c1),var(--c1d),var(--c1)); padding:4px; box-shadow:0 0 18px 4px rgba(var(--glow),0.7),0 0 40px 8px rgba(var(--glow),0.4); animation:rotateBorder 4s linear infinite; }
 @keyframes rotateBorder { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
@@ -35,15 +55,15 @@ body { background:transparent; width:1920px; height:1080px; overflow:hidden; }
 .style-1 .bar-wrap { position:relative; display:flex; flex-direction:column; }
 .style-1 .main-bar { position:relative; background:linear-gradient(90deg,var(--c1d) 0%,var(--c1) 30%,var(--c1) 60%,var(--c1d) 100%); padding:18px 50px 18px 36px; clip-path:polygon(0 0,100% 0,94% 100%,0 100%); min-width:480px; border-top:2px solid rgba(var(--glow),0.6); box-shadow:0 0 20px rgba(var(--glow),0.5),inset 0 1px 0 rgba(255,255,255,0.15); overflow:hidden; }
 .style-1 .main-bar::before { content:''; position:absolute; top:0; left:0; right:0; height:45%; background:linear-gradient(180deg,rgba(255,255,255,0.12) 0%,transparent 100%); }
-.style-1 .naam-slot { font-size:42px; font-weight:800; color:#fff; letter-spacing:1px; text-shadow:0 2px 8px rgba(0,0,0,0.8); position:relative; z-index:1; line-height:1.1; display:block; }
-.style-1 .title-slot { font-size:17px; font-weight:700; color:rgba(var(--title),0.9); letter-spacing:3px; text-transform:uppercase; margin-top:3px; position:relative; z-index:1; display:block; }
+.style-1 .naam-slot { font-size:42px; font-weight:800; color:#fff; letter-spacing:1px; text-shadow:0 2px 8px rgba(0,0,0,0.8); position:relative; z-index:1; line-height:1.1; }
+.style-1 .title-slot { font-size:17px; font-weight:700; color:rgba(var(--title),0.9); letter-spacing:3px; text-transform:uppercase; margin-top:3px; position:relative; z-index:1; }
 .style-1 .accent-lines { display:flex; align-items:center; clip-path:polygon(0 0,100% 0,96% 100%,0 100%); }
 .style-1 .line-a { height:6px; width:160px; background:linear-gradient(90deg,var(--c2),var(--c1)); box-shadow:0 0 10px rgba(var(--glow),0.8); }
 .style-1 .line-gap { width:4px; height:6px; background:#050d1a; }
 .style-1 .line-b { height:4px; flex:1; background:linear-gradient(90deg,var(--c1),rgba(var(--glow),0.2)); box-shadow:0 0 8px rgba(var(--glow),0.6); }
 .style-1 .shadow-bar { height:8px; background:linear-gradient(90deg,rgba(var(--glow),0.6),transparent); clip-path:polygon(0 0,92% 0,88% 100%,0 100%); margin-top:2px; filter:blur(2px); }
 
-/* ================= STYLE 2 — BREAKING NEWS SPLIT ================= */
+/* ===== STYLE 2 — BREAKING NEWS SPLIT ===== */
 .style-2 { position:relative; }
 .style-2 .bn-tag { position:absolute; top:-26px; left:230px; background:var(--c2); color:#111; font-family:'Rajdhani',sans-serif; font-weight:700; font-size:15px; letter-spacing:2px; padding:4px 14px; clip-path:polygon(8% 0,100% 0,92% 100%,0 100%); }
 .style-2 .bn-left { background:linear-gradient(135deg,var(--c1d),var(--c1)); padding:16px 46px 16px 30px; clip-path:polygon(0 0,100% 0,84% 100%,0 100%); box-shadow:0 6px 18px rgba(0,0,0,0.5); }
@@ -51,127 +71,53 @@ body { background:transparent; width:1920px; height:1080px; overflow:hidden; }
 .style-2 .bn-left .title-slot { font-size:15px; font-weight:700; color:#fff; letter-spacing:3px; text-transform:uppercase; }
 .style-2 .bn-right .naam-slot { font-size:38px; font-weight:800; color:#fff; letter-spacing:1px; text-shadow:0 2px 6px rgba(0,0,0,0.6); }
 
-/* ================= STYLE 3 — CAPSULE PILL ================= */
+/* ===== STYLE 3 — CAPSULE PILL ===== */
 .style-3 .capsule { position:relative; display:flex; align-items:center; background:linear-gradient(180deg,var(--c1) 0%,var(--c1d) 100%); border-radius:40px; padding:14px 46px 14px 34px; box-shadow:0 0 22px rgba(var(--glow),0.55),inset 0 2px 0 rgba(255,255,255,0.25); min-width:480px; }
 .style-3 .capsule::before { content:''; width:8px; height:60%; background:rgba(255,255,255,0.65); border-radius:4px; margin-right:22px; box-shadow:0 0 10px rgba(255,255,255,0.6); }
 .style-3 .naam-slot { font-size:36px; font-weight:800; color:#fff; letter-spacing:1px; }
 .style-3 .title-slot { font-size:14px; font-weight:700; color:rgba(var(--title),0.9); letter-spacing:3px; text-transform:uppercase; margin-top:2px; }
 
-/* ================= STYLE 4 — RIBBON FLAG ================= */
+/* ===== STYLE 4 — RIBBON FLAG ===== */
 .style-4 { align-items:stretch; }
 .style-4 .rb-flag { background:linear-gradient(135deg,var(--c1),var(--c1d)); width:70px; clip-path:polygon(0 0,100% 0,72% 50%,100% 100%,0 100%); box-shadow:0 0 14px rgba(var(--glow),0.6); flex-shrink:0; }
 .style-4 .rb-bar { background:linear-gradient(90deg,#f2f2f2,#dcdcdc); margin-left:-2px; padding:14px 40px 14px 34px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 6px 14px rgba(0,0,0,0.4); min-width:420px; }
 .style-4 .rb-bar .naam-slot { font-size:34px; font-weight:800; color:#111; letter-spacing:0.5px; }
 .style-4 .rb-bar .title-slot { font-size:13px; font-weight:700; color:var(--c1); letter-spacing:2px; text-transform:uppercase; margin-top:2px; }
 
-/* ================= STYLE 5 — MINIMAL LINE ================= */
+/* ===== STYLE 5 — MINIMAL LINE ===== */
 .style-5 { flex-direction:column; align-items:flex-start; }
 .style-5 .naam-slot { font-size:40px; font-weight:800; color:#fff; text-shadow:0 2px 10px rgba(0,0,0,0.8); }
 .style-5 .min-underline { width:100%; height:5px; background:linear-gradient(90deg,var(--c1),var(--c2)); margin-top:8px; box-shadow:0 0 10px rgba(var(--glow),0.7); border-radius:3px; }
 .style-5 .title-slot { font-size:15px; font-weight:700; color:rgba(var(--title),0.9); letter-spacing:3px; text-transform:uppercase; margin-top:8px; }
 
-/* ================= STYLE 6 — CORPORATE BOX ================= */
+/* ===== STYLE 6 — CORPORATE BOX ===== */
 .style-6 .corp-box { background:rgba(10,10,15,0.88); border-left:6px solid var(--c2); padding:16px 44px 16px 28px; min-width:460px; box-shadow:0 8px 24px rgba(0,0,0,0.5); }
 .style-6 .naam-slot { font-size:36px; font-weight:800; color:#fff; }
 .style-6 .title-slot { font-size:14px; font-weight:600; color:rgba(var(--title),0.85); letter-spacing:2px; text-transform:uppercase; margin-top:4px; }
 
-/* ================= STYLE 7 — GAMING ANGULAR ================= */
+/* ===== STYLE 7 — GAMING ANGULAR ===== */
 .style-7 .gm-box { position:relative; background:linear-gradient(90deg,var(--c1d),var(--c1)); padding:18px 50px 18px 34px; clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,8% 50%); box-shadow:0 0 24px rgba(var(--glow),0.7); min-width:480px; }
 .style-7 .naam-slot { font-family:'Rajdhani',sans-serif; font-size:38px; font-weight:700; font-style:italic; color:#fff; letter-spacing:1px; text-shadow:0 0 10px rgba(var(--glow),0.9); }
 .style-7 .title-slot { font-family:'Rajdhani',sans-serif; font-size:15px; font-weight:700; color:var(--c2); letter-spacing:3px; text-transform:uppercase; margin-top:2px; }
-</style>
-</head>
-<body>
-<div class="lower-third theme-1" id="lt" data-style="1">
 
-  <div class="style-block style-1">
-    <div class="circle-wrap"><div class="circle-outer"><div class="circle-inner"></div></div></div>
-    <div class="bar-wrap">
-      <div class="main-bar">
-        <span class="naam-slot">आपका नाम यहाँ</span>
-        <span class="title-slot">LIVE • YOUTUBE</span>
-      </div>
-      <div class="accent-lines"><div class="line-a"></div><div class="line-gap"></div><div class="line-b"></div></div>
-      <div class="shadow-bar"></div>
-    </div>
-  </div>
+/* ===== STYLE 8 — WAVE ROUNDED ===== */
+.style-8 .wave-bar { position:relative; background:linear-gradient(90deg,var(--c1),var(--c1d)); border-radius:0 30px 30px 30px; padding:16px 46px 22px 34px; min-width:460px; box-shadow:0 10px 24px rgba(0,0,0,0.4),0 0 20px rgba(var(--glow),0.4); }
+.style-8 .wave-bar::after { content:''; position:absolute; left:0; right:0; bottom:-9px; height:14px; background:radial-gradient(circle at 12px 0,transparent 12px,var(--c1d) 13px) repeat-x; background-size:24px 14px; }
+.style-8 .naam-slot { font-size:36px; font-weight:800; color:#fff; }
+.style-8 .title-slot { font-size:14px; font-weight:700; color:rgba(var(--title),0.9); letter-spacing:2px; text-transform:uppercase; margin-top:4px; }
 
-  <div class="style-block style-2">
-    <div class="bn-tag">LIVE</div>
-    <div class="bn-left"><span class="title-slot">LIVE • YOUTUBE</span></div>
-    <div class="bn-right"><span class="naam-slot">आपका नाम यहाँ</span></div>
-  </div>
+/* ===== STYLE 9 — DIAGONAL BOLD ===== */
+.style-9 .db-box { position:relative; background:var(--c1); padding:20px 60px 20px 34px; clip-path:polygon(0 0,100% 0,88% 100%,0 100%); box-shadow:0 8px 22px rgba(0,0,0,0.45); }
+.style-9 .db-box::before { content:''; position:absolute; left:0; top:0; bottom:0; width:10px; background:var(--c2); }
+.style-9 .naam-slot { font-size:44px; font-weight:800; color:#fff; letter-spacing:1px; }
+.style-9 .title-slot { font-size:14px; font-weight:700; color:var(--c2); letter-spacing:3px; text-transform:uppercase; margin-top:2px; }
 
-  <div class="style-block style-3">
-    <div class="capsule">
-      <div>
-        <span class="naam-slot" style="display:block">आपका नाम यहाँ</span>
-        <span class="title-slot" style="display:block">LIVE • YOUTUBE</span>
-      </div>
-    </div>
-  </div>
+/* ===== STYLE 10 — CARD ELEVATED ===== */
+.style-10 .card { display:flex; align-items:center; background:#fff; border-radius:14px; padding:14px 34px 14px 14px; box-shadow:0 12px 30px rgba(0,0,0,0.35); min-width:440px; }
+.style-10 .card-accent { width:8px; align-self:stretch; border-radius:8px; background:var(--c1); margin-right:18px; }
+.style-10 .naam-slot { font-size:32px; font-weight:800; color:#111; }
+.style-10 .title-slot { font-size:13px; font-weight:700; color:var(--c1); letter-spacing:2px; text-transform:uppercase; margin-top:3px; }
 
-  <div class="style-block style-4">
-    <div class="rb-flag"></div>
-    <div class="rb-bar">
-      <span class="naam-slot">आपका नाम यहाँ</span>
-      <span class="title-slot">LIVE • YOUTUBE</span>
-    </div>
-  </div>
-
-  <div class="style-block style-5">
-    <span class="naam-slot">आपका नाम यहाँ</span>
-    <div class="min-underline"></div>
-    <span class="title-slot">LIVE • YOUTUBE</span>
-  </div>
-
-  <div class="style-block style-6">
-    <div class="corp-box">
-      <span class="naam-slot" style="display:block">आपका नाम यहाँ</span>
-      <span class="title-slot" style="display:block">LIVE • YOUTUBE</span>
-    </div>
-  </div>
-
-  <div class="style-block style-7">
-    <div class="gm-box">
-      <span class="naam-slot" style="display:block">आपका नाम यहाँ</span>
-      <span class="title-slot" style="display:block">LIVE • YOUTUBE</span>
-    </div>
-  </div>
-
-</div>
-<script>
-const ltEl = document.getElementById('lt');
-
-function applyTheme(colorNum){
-  for(let i=1;i<=5;i++) ltEl.classList.remove('theme-'+i);
-  ltEl.classList.add('theme-'+(colorNum||1));
-}
-function applyStyle(styleNum){
-  ltEl.setAttribute('data-style', styleNum || 1);
-}
-function setText(naam, title){
-  document.querySelectorAll('.naam-slot').forEach(el => el.textContent = naam);
-  document.querySelectorAll('.title-slot').forEach(el => el.textContent = title);
-}
-
-function connect(){
-  const ws = new WebSocket('wss://' + location.host);
-  ws.onmessage = (e) => {
-    const data = JSON.parse(e.data);
-    if (data.type === 'update') {
-      setText(data.naam || 'NAAM YAHAN', data.title || 'TITLE LIVE');
-      applyStyle(data.style);
-      applyTheme(data.color);
-      ltEl.classList.add('show');
-    }
-    if (data.type === 'hide') {
-      ltEl.classList.remove('show');
-    }
-  };
-  ws.onclose = () => setTimeout(connect, 3000);
-}
-connect();
-</script>
-</body>
-</html>
+/* ===== STYLE 11 — TAG BADGE ===== */
+.style-11 { flex-direction:column; align-items:flex-start; }
+.style-
