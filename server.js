@@ -13,23 +13,23 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/obs', (req, res) => {
+app.get('/obs.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'obs.html'));
 });
 
-let clients = [];
-
 wss.on('connection', (ws) => {
-  clients.push(ws);
-  ws.on('message', (msg) => {
-    clients.forEach(client => {
+  console.log('Client connected. Total:', wss.clients.size);
+
+  ws.on('message', (message) => {
+    wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-        client.send(msg.toString());
+        client.send(message.toString());
       }
     });
   });
+
   ws.on('close', () => {
-    clients = clients.filter(c => c !== ws);
+    console.log('Client disconnected. Total:', wss.clients.size);
   });
 });
 
