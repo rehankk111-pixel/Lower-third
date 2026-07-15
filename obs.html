@@ -120,4 +120,214 @@ body { background:transparent; width:1920px; height:1080px; overflow:hidden; }
 
 /* ===== STYLE 11 — TAG BADGE ===== */
 .style-11 { flex-direction:column; align-items:flex-start; }
-.style-
+.style-11 .tag-badge { background:var(--c2); border-radius:20px; padding:4px 16px; margin-bottom:8px; }
+.style-11 .tag-badge .title-slot { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#111; margin:0; }
+.style-11 .naam-slot { font-size:40px; font-weight:800; color:#fff; text-shadow:0 2px 10px rgba(0,0,0,0.8); }
+
+/* ===== STYLE 12 — BRACKET FRAME ===== */
+.style-12 { position:relative; padding:20px 54px; }
+.style-12 .bf-corner { position:absolute; width:22px; height:22px; border:3px solid var(--c2); }
+.style-12 .bf-tl { top:0; left:0; border-right:none; border-bottom:none; }
+.style-12 .bf-tr { top:0; right:0; border-left:none; border-bottom:none; }
+.style-12 .bf-bl { bottom:0; left:0; border-right:none; border-top:none; }
+.style-12 .bf-br { bottom:0; right:0; border-left:none; border-top:none; }
+.style-12 .naam-slot { font-size:38px; font-weight:800; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,0.8); }
+.style-12 .title-slot { font-size:14px; font-weight:700; color:var(--c2); letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+
+/* ===== STYLE 13 — GLASS BLUR ===== */
+.style-13 .glass-bar { background:rgba(255,255,255,0.12); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,0.35); border-bottom:3px solid var(--c1); border-radius:16px; padding:16px 44px; min-width:460px; box-shadow:0 8px 26px rgba(0,0,0,0.35); }
+.style-13 .naam-slot { font-size:36px; font-weight:800; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,0.6); }
+.style-13 .title-slot { font-size:14px; font-weight:700; color:var(--c2); letter-spacing:2px; text-transform:uppercase; margin-top:4px; }
+
+/* ===== STYLE 14 — STACKED BLOCK ===== */
+.style-14 { flex-direction:column; align-items:flex-start; }
+.style-14 .sb-top { background:var(--c1); padding:14px 44px 14px 28px; min-width:420px; box-shadow:0 4px 14px rgba(0,0,0,0.3); }
+.style-14 .sb-bottom { background:var(--c2); padding:8px 28px; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+.style-14 .naam-slot { font-size:36px; font-weight:800; color:#fff; }
+.style-14 .title-slot { font-size:13px; font-weight:700; color:#111; letter-spacing:2px; text-transform:uppercase; }
+
+/* ===== STYLE 15 — OUTLINE GHOST ===== */
+.style-15 .ghost-box { border:3px solid var(--c1); border-radius:8px; padding:16px 44px; background:rgba(0,0,0,0.35); box-shadow:0 0 18px rgba(var(--glow),0.5); }
+.style-15 .naam-slot { font-size:36px; font-weight:800; color:#fff; }
+.style-15 .title-slot { font-size:13px; font-weight:700; color:var(--c2); letter-spacing:2px; text-transform:uppercase; margin-top:4px; }
+
+/* ===== STYLE 16 — STRIPES ===== */
+.style-16 .stripe-box { position:relative; background:var(--c1d); padding:16px 44px 16px 34px; overflow:hidden; min-width:460px; box-shadow:0 8px 20px rgba(0,0,0,0.4); }
+.style-16 .stripe-box::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg,rgba(255,255,255,0.06) 0 10px,transparent 10px 20px); }
+.style-16 .stripe-accent { position:absolute; left:0; top:0; bottom:0; width:10px; background:var(--c2); }
+.style-16 .naam-slot { position:relative; font-size:36px; font-weight:800; color:#fff; z-index:1; }
+.style-16 .title-slot { position:relative; font-size:13px; font-weight:700; color:var(--c2); letter-spacing:2px; text-transform:uppercase; margin-top:4px; z-index:1; }
+
+/* ===== STYLE 17 — INITIAL BADGE ===== */
+.style-17 .ib-circle { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,var(--c1),var(--c2)); display:flex; align-items:center; justify-content:center; font-family:'Rajdhani',sans-serif; font-size:28px; font-weight:800; color:#fff; margin-right:18px; box-shadow:0 0 14px rgba(var(--glow),0.6); flex-shrink:0; }
+.style-17 .naam-slot { font-size:34px; font-weight:800; color:#fff; }
+.style-17 .title-slot { font-size:13px; font-weight:700; color:rgba(var(--title),0.9); letter-spacing:2px; text-transform:uppercase; margin-top:2px; }
+</style>
+</head>
+<body>
+<div class="lower-third theme-1" id="lt" data-style="1">
+
+  <div class="style-block style-1">
+    <div class="circle-wrap"><div class="circle-outer"><div class="circle-inner"></div></div></div>
+    <div class="bar-wrap">
+      <div class="main-bar">
+        <span class="naam-slot">आपका नाम यहाँ</span>
+        <span class="title-slot">LIVE • YOUTUBE</span>
+      </div>
+      <div class="accent-lines"><div class="line-a"></div><div class="line-gap"></div><div class="line-b"></div></div>
+      <div class="shadow-bar"></div>
+    </div>
+  </div>
+
+  <div class="style-block style-2">
+    <div class="bn-tag">LIVE</div>
+    <div class="bn-left"><span class="title-slot">LIVE • YOUTUBE</span></div>
+    <div class="bn-right"><span class="naam-slot">आपका नाम यहाँ</span></div>
+  </div>
+
+  <div class="style-block style-3">
+    <div class="capsule">
+      <div>
+        <span class="naam-slot">आपका नाम यहाँ</span>
+        <span class="title-slot">LIVE • YOUTUBE</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="style-block style-4">
+    <div class="rb-flag"></div>
+    <div class="rb-bar">
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-5">
+    <span class="naam-slot">आपका नाम यहाँ</span>
+    <div class="min-underline"></div>
+    <span class="title-slot">LIVE • YOUTUBE</span>
+  </div>
+
+  <div class="style-block style-6">
+    <div class="corp-box">
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-7">
+    <div class="gm-box">
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-8">
+    <div class="wave-bar">
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-9">
+    <div class="db-box">
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-10">
+    <div class="card">
+      <div class="card-accent"></div>
+      <div>
+        <span class="naam-slot">आपका नाम यहाँ</span>
+        <span class="title-slot">LIVE • YOUTUBE</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="style-block style-11">
+    <div class="tag-badge"><span class="title-slot">LIVE • YOUTUBE</span></div>
+    <span class="naam-slot">आपका नाम यहाँ</span>
+  </div>
+
+  <div class="style-block style-12">
+    <div class="bf-corner bf-tl"></div><div class="bf-corner bf-tr"></div>
+    <div class="bf-corner bf-bl"></div><div class="bf-corner bf-br"></div>
+    <span class="naam-slot">आपका नाम यहाँ</span>
+    <span class="title-slot">LIVE • YOUTUBE</span>
+  </div>
+
+  <div class="style-block style-13">
+    <div class="glass-bar">
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-14">
+    <div class="sb-top"><span class="naam-slot">आपका नाम यहाँ</span></div>
+    <div class="sb-bottom"><span class="title-slot">LIVE • YOUTUBE</span></div>
+  </div>
+
+  <div class="style-block style-15">
+    <div class="ghost-box">
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-16">
+    <div class="stripe-box">
+      <div class="stripe-accent"></div>
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+  <div class="style-block style-17">
+    <div class="ib-circle initial-slot">A</div>
+    <div>
+      <span class="naam-slot">आपका नाम यहाँ</span>
+      <span class="title-slot">LIVE • YOUTUBE</span>
+    </div>
+  </div>
+
+</div>
+<script>
+const ltEl = document.getElementById('lt');
+
+function applyTheme(colorNum){
+  for(let i=1;i<=15;i++) ltEl.classList.remove('theme-'+i);
+  ltEl.classList.add('theme-'+(colorNum||1));
+}
+function applyStyle(styleNum){
+  ltEl.setAttribute('data-style', styleNum || 1);
+}
+function setText(naam, title){
+  document.querySelectorAll('.naam-slot').forEach(el => el.textContent = naam);
+  document.querySelectorAll('.title-slot').forEach(el => el.textContent = title);
+  const initial = (naam || 'A').trim().charAt(0).toUpperCase() || 'A';
+  document.querySelectorAll('.initial-slot').forEach(el => el.textContent = initial);
+}
+
+function connect(){
+  const ws = new WebSocket('wss://' + location.host);
+  ws.onmessage = (e) => {
+    const data = JSON.parse(e.data);
+    if (data.type === 'update') {
+      setText(data.naam || 'NAAM YAHAN', data.title || 'TITLE LIVE');
+      applyStyle(data.style);
+      applyTheme(data.color);
+      ltEl.classList.add('show');
+    }
+    if (data.type === 'hide') {
+      ltEl.classList.remove('show');
+    }
+  };
+  ws.onclose = () => setTimeout(connect, 3000);
+}
+connect();
+</script>
+</body>
+</html>
